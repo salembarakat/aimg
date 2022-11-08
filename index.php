@@ -51,7 +51,6 @@ error_reporting(0);
 ini_set('display_errors', 0);
 try{
 
-$GLOBALS['count']=0;
  function fix($key)
     {
         # code...
@@ -71,7 +70,7 @@ preg_match_all('!src=[\"](.+?)(.jpg|.png|jpeg|.helf|.png|.gif|.svg|.tlff|.raw)[\
     echo '<img src='.fix($keyss).' style="width: 25%;
     height: 300%;
     border-radius: 30px;">';
-    $GLOBALS['count']++;
+    
     }
   
     }
@@ -91,7 +90,7 @@ search($result);
 searchurl($result);
 
 }catch(Exception $e) {
-  echo 'Message: ';
+  echo 'error: ';
 }
 
 
